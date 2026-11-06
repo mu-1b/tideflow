@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "TideFlow",
+    "slug": "tideflow",
+    "scheme": "tideflow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tideflow.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "TideFlow uses your location to find the nearest tide station."
+      }
+    },
+    "android": {
+      "package": "com.tideflow.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-dev-client",
+      "@rnmapbox/maps",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "TideFlow uses your location to find the nearest tide station."
+        }
+      ],
+      "expo-notifications",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}
